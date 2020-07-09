@@ -101,3 +101,14 @@ names.split(/\s*;\s*/)
 ##Pegar data da tag
 
 var idCentro = htmlElement.getAttribute('data-modal');
+
+## Somar Valores do CheckBox selecionados 
+
+ $('.ted').change(function (e) {
+            var total = $('input[class="ted"]:checked').get().reduce(function (tot, el) {
+                let numberf = el.getAttribute('data-valor').toString().replace('.', '').replace(',', '.');
+                return (parseFloat(tot) + parseFloat(numberf)).toFixed(2);
+            }, 0);
+
+            $('#vlrTotal').val(moneyBr(total));
+        });
