@@ -123,5 +123,8 @@ const testeInterval = setInterval (() => {console.log('Teste');},1000);
 /*Cancela setInterval*/ 
 setTimeout(()=>{clearInterval(testeInterval)},1000);
 
-
+/* ###Factories(Fábrica de Objeto)*/
+const Mamifero = function(nome, som) {
+   return {nome ,som};
+};
 
