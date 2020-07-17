@@ -98,11 +98,11 @@ names.split(/\s*;\s*/)
  //Moeda Local 
  parseFloat(sd).toLocaleString("pt-BR", { style: "currency" , currency:"BRL"});
 
-##Pegar data da tag
+/* ##Pegar data da tag */
 
 var idCentro = htmlElement.getAttribute('data-modal');
 
-## Somar Valores do CheckBox selecionados 
+/* ## Somar Valores do CheckBox selecionados */
 
  $('.ted').change(function (e) {
             var total = $('input[class="ted"]:checked').get().reduce(function (tot, el) {
@@ -112,3 +112,16 @@ var idCentro = htmlElement.getAttribute('data-modal');
 
             $('#vlrTotal').val(moneyBr(total));
         });
+/* ## SetTimeout, SetInterval */
+
+const mostrar = () =>{
+    alert('SetTimeout');
+};
+setTimeout(mostrar, 3000);
+
+const testeInterval = setInterval (() => {console.log('Teste');},1000);
+/*Cancela setInterval*/ 
+setTimeout(()=>{clearInterval(testeInterval)},1000);
+
+
+
