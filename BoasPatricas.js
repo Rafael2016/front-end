@@ -128,3 +128,24 @@ const Mamifero = function(nome, som) {
    return {nome ,som};
 };
 
+/*TEXTAREA EXPANDIR TAMANHO DO TEXTO*/
+setTimeout(function () {
+
+       var txtarea = document.querySelector("textarea.form-control");
+       txtarea.style.height = txtarea.scrollHeight+"px";        
+                
+}, 100);
+
+/*FECTH CHAMADA AJAX */
+
+$('elemento').on('click', async function(){
+
+	var response = await fetch('URL CHAMADA');
+        var jsonData = await response.json();
+	
+  	/*Iterando retorno Loop*/
+	jsonData.map(value =>{
+		console.log(value)
+  	})		
+
+});
