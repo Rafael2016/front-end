@@ -156,3 +156,10 @@ $('input[type="file"]').change(function(e){
             var fileName = e.target.files[0].name;
             alert('The file "' + fileName +  '" has been selected.');
         });
+/* VERIFICAR SE ELEMENTO EXISTE EM UMA STRING*/
+let frase = 'Rafael luz o maior'
+console.log(frase.includes('luz'))
+/**TRANSFORMA CADEIA DE STRING EM ARRAY */
+let word = 'Rafael'
+console.log(Array.from(word))
+
